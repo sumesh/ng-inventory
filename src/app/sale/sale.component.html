@@ -1,0 +1,328 @@
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <!-- <div class="card-header">
+          <strong>Credit Card</strong>
+          <small>Form</small>
+        </div> -->
+        <div class="card-block">
+          <div class="row">
+
+            <div class="col-md-3">
+              <div class="form-group">
+                <label for="example-input-small">Invoice Number</label>
+                <table>
+                  <tr>
+                    <td style="width: 30%">
+                      <select class="form-control form-control-sm" placeholder="Test" [(ngModel)]="sale.invoicenumber.invoicetype">
+                        <option value="S">S</option>
+                        <option value="P">P</option>
+                        <option value="SR">SR</option>                        
+                      </select>
+                    </td>
+                    <td>
+                      <input type="text" class="form-control form-control-sm" [(ngModel)]="sale.invoicenumber.invoicepart1" placeholder="100001">
+                    </td>
+                    <td>
+                      <input type="text" class="form-control form-control-sm" [(ngModel)]="sale.invoicenumber.invoicepart2" placeholder="100001">
+                    </td>
+                  </tr>
+                </table>
+
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <label for="example-input-small">Date</label>
+                <input type="date" class="form-control form-control-sm" [(ngModel)]="sale.invoicedate" placeholder="Date">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="example-input-small">Type</label>
+                    <select class="form-control form-control-sm" [(ngModel)]="sale.saletype" placeholder="Test">
+                        <option value="R">Retail</option>
+                        <option value="W">Whole Sale</option> 
+                      </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="example-input-small">Payment Mode</label>
+                    <div class="clear"></div>
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label">
+                          <input class="form-check-input" type="checkbox"    
+                          [(ngModel)]="sale.iscash"><i class="fa fa-money"></i>  </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label">
+                         <input class="form-check-input" type="checkbox"  [(ngModel)]="sale.iscard"> <i class="fa fa-credit-card"></i>
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" [(ngModel)]="sale.iscredit">Credit
+                    </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+
+            <div class="col-md-3">
+              <div class="form-group">
+                <label for="example-input-small">Sales Man</label>
+                <input type="text" class="form-control form-control-sm" placeholder="Sales Man" [(ngModel)]="sale.salesman">
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <label for="example-input-small">  <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox"
+                      [(ngModel)]="sale.iswithwarranty"> With Warrenty
+                    </label></label>
+                <input type="text" class="form-control form-control-sm" [(ngModel)]="sale.warrantycardnum" placeholder="Warrenty Card Details">
+              </div>
+
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <label for="example-input-small">Refference Type</label>
+                <select class="form-control form-control-sm" [(ngModel)]="sale.reftype" placeholder="Test">
+                  <option value="-"></option>
+                        <option value="SR">Sale Return</option>
+                          <option value="ADV">Advance</option> 
+                        <option value="PUR">Purchase</option> 
+                      </select>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <label for="example-input-small">Refference No:</label>
+                <input type="text" class="form-control form-control-sm" [(ngModel)]="sale.refnum" placeholder="Refference No:">
+              </div>
+            </div>
+          </div>
+          <!-- Customer Details -->
+          <div class="row">
+            <div class="col-md-12">
+              <label>Customer Details</label>
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <div class="controls">
+                      <div class="input-prepend input-group">
+                        <span class="input-group-addon"><i class="fa fa-mobile"></i></span>
+                        <input class="form-control form-control-sm" [(ngModel)]="sale.customer.phone" size="16" type="text" placeholder="Mobile Number">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <div class="controls">
+                      <div class="input-prepend input-group">
+                        <span class="input-group-addon">@</span>
+                        <input class="form-control form-control-sm" [(ngModel)]="sale.customer.email" size="16" type="text" placeholder="Email">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <div class="controls">
+                      <div class="input-prepend input-group">
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <input class="form-control form-control-sm" [(ngModel)]="sale.customer.name" size="16" type="text" placeholder="Customer Name">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <div class="controls">
+                      <div class="input-prepend input-group">
+                        <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                        <textarea class="form-control form-control-sm" placeholder="Address" rows="1" [(ngModel)]="sale.customer.address"></textarea>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <div class="controls">
+                      <div class="input-prepend input-group">
+                        <span class="input-group-addon">GST</span>
+                        <input class="form-control form-control-sm" [(ngModel)]="sale.customer.gst" size="16" type="text" placeholder="GST Details">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Item Details -->
+          <div class="row">
+            <div class="col-sm-2 text-bold">Code</div>
+            <div class="col-sm-2 text-bold">Item</div>
+            <div class="col-sm-1 text-bold">Qty</div>
+            <div class="col-sm-2 text-bold">Price</div>
+            <div class="col-sm-1 text-bold">Disc.%</div>
+            <div class="col-sm-1 text-bold">Disc.</div>
+            <div class="col-sm-1 text-bold">Total</div>
+            <div class="col-sm-1 text-bold">Tax%</div>
+            <div class="col-sm-1 text-bold">Gross</div>
+          </div>
+          <hr>
+          <div class="invoice-items">
+            <div class="row" *ngFor="let item of sale.items">
+              <div class="col-sm-2">
+                <input type="text" class="form-control form-control-sm" [(ngModel)]="item.itemcode">
+              </div>
+              <div class="col-sm-2">
+                <input type="text" class="form-control form-control-sm" [(ngModel)]="item.itemname">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control form-control-sm" [(ngModel)]="item.qty">
+              </div>
+              <div class="col-sm-2">
+                <input type="text" class="form-control form-control-sm" [(ngModel)]="item.price">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control form-control-sm" [(ngModel)]="item.discountper">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control form-control-sm" [(ngModel)]="item.discount" >
+              </div>
+              <div class="col-sm-1">
+                {{item.qty * item.price}}
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control form-control-sm" [(ngModel)]="item.tax">
+              </div>
+              <div class="col-sm-1 column-total">
+                {{item.qty * item.price}}
+              </div>
+            </div>
+          </div>
+          <hr>
+          <!-- Total Details -->
+          <div class="invoice-details">
+            <!-- Total Details Row 1 -->
+            <div class="row">
+
+              <div class="col-md-2">
+                <div class="form-group">
+                  <label for="example-input-small">Sub Total</label>
+                  <input type="text" class="form-control form-control-sm" value={{getSubTotal()}} placeholder="Sub Total">
+                </div>
+              </div>
+
+              <div class="col-md-2">
+                <div class="form-group">
+                  <label for="example-input-small">Tax</label>
+                  <input type="text" class="form-control form-control-sm" value={{getSubTax()}} placeholder="Sub Total">
+                </div>
+              </div>
+
+              <div class="col-md-2">
+                <div class="form-group">
+                  <label for="example-input-small">Grand Total</label>
+                  <input type="text" class="form-control form-control-sm" value={{getGrandTotal()}} placeholder="Sub Total">
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-12">
+                    <label for="example-input-small">Discount</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <div class="controls">
+                        <div class="input-prepend input-group">
+                          <span class="input-group-addon">%</span>
+                          <input class="form-control form-control-sm" [(ngModel)]="sale.discountper" type="text">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <div class="controls">
+                        <div class="input-prepend input-group">
+                          <span class="input-group-addon">$</span>
+                          <input class="form-control form-control-sm" [(ngModel)]="sale.discount" type="text">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-2">
+                <div class="form-group">
+                  <label for="example-input-small">Gross. Amount</label>
+                  <input type="text" class="form-control form-control-sm" value={{getSubTotal()}} placeholder="Gross Amount">
+                </div>
+              </div>
+
+
+            </div>
+
+            <!-- Total Details Row 2 -->
+            <div class="row">
+
+              <div class="col-md-2">
+                <div class="form-group">
+                  <label for="example-input-small">Cash Recieved</label>
+                  <input type="text" class="form-control form-control-sm">
+                </div>
+              </div>
+
+              <div class="col-md-2">
+                <div class="form-group">
+                  <label for="example-input-small">Card</label>
+                  <input type="text" class="form-control form-control-sm">
+                </div>
+              </div>
+
+              <div class="col-md-2">
+                <div class="form-group">
+                  <label for="example-input-small">Credit</label>
+                  <input type="text" class="form-control form-control-sm">
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="example-input-small">Advance/ Sales Reurn</label>
+                  <input type="text" class="form-control form-control-sm">
+                </div>
+              </div>
+
+              <div class="col-md-2">
+                <div class="form-group">
+                  <label for="example-input-small">Cash Balance</label>
+                  <input type="text" class="form-control form-control-sm" placeholder="Gross Amount">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
